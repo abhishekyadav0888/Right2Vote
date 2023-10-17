@@ -14,7 +14,7 @@ public class Main {
 	
 	public static void findCombination(int budget, double Tshirt, double Jeans, double Jacket) {
 		
-		if(budget < Math.min(Tshirt, (Math.min(Jeans, Jacket)))) {
+		if(budget < (Tshirt + Jeans + Jacket)) {
 			System.out.println("No combination is possible in this budget.");
 		}
 		

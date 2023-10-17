@@ -13,6 +13,11 @@ public class Main {
 	}
 	
 	public static void findCombination(int budget, double Tshirt, double Jeans, double Jacket) {
+		
+		if(budget < Math.min(Tshirt, (Math.min(Jeans, Jacket)))) {
+			System.out.println("No combination is possible in this budget.");
+		}
+		
         int maxTshirt = (int) (budget / Tshirt);
         int maxJeans = (int) (budget / Jeans);
         int maxJacket = (int) (budget / Jacket);
